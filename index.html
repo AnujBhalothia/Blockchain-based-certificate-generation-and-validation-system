@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <script src="./connect-wallet.js" type="module"></script>
+    
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <div class="container-fluid">
+        <!-- Left Part: Logo and Text -->
+        <div class="d-flex align-items-center">
+          <div>
+            <!-- Logo (replace with your logo image) -->
+            <a class="navbar-brand" href="#"
+              ><img src="images/digital_gujarat.png" alt="Logo" width="40"
+            /></a>
+          </div>
+          <div>
+            <!-- Text -->
+            <span class="text-light ms-2">Government of Gujarat</span>
+          </div>
+        </div>
+
+        <!-- Right Part: Dark Mode Toggle, Text Icons, Language Selector -->
+        <div class="d-flex align-items-center ms-auto navbar-right">
+          <!-- Dark Mode Toggle Icon -->
+          <button class="btn me-2" id="darkModeToggle">
+            <i class="fas fa-sun dark-mode-icon"></i>
+            <!-- Sun icon for light mode -->
+          </button>
+
+          <!-- Vertical Bar Divider -->
+          <div class="vertical-bar"></div>
+
+          <!-- Text Size Controls -->
+          <div class="btn-group">
+            <button class="btn btn-transparent" id="decreaseTextSize">
+              <!-- Custom image icon for decreasing text size -->
+              <img
+                src="images/icons8-decrease_font 1.svg"
+                alt="Decrease Text Size"
+              />
+            </button>
+            <button class="btn btn-transparent" id="resetTextSize">
+              <!-- Custom image icon for resetting text size -->
+              <img src="images/icons8-typography 1.svg" alt="Reset Text Size" />
+            </button>
+            <button class="btn btn-transparent" id="increaseTextSize">
+              <!-- Custom image icon for increasing text size -->
+              <img
+                src="images/icons8-increase_font 1.svg"
+                alt="Increase Text Size"
+              />
+            </button>
+          </div>
+
+          <!-- Vertical Bar Divider -->
+          <div class="vertical-bar"></div>
+
+          <!-- Language Selector Dropdown -->
+          <div class="dropdown">
+            <button
+              class="btn btn-transparent dropdown-toggle"
+              type="button"
+              id="languageDropdown"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              English
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+              <li><a class="dropdown-item active" href="#">English</a></li>
+              <li><a class="dropdown-item" href="#">Hindi</a></li>
+              <li><a class="dropdown-item" href="#">Gujarati</a></li>
+              <!-- Add more languages as needed -->
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-xl navbar2">
+      <div class="container-fluid">
+        <!-- Logos on the left -->
+        <div class="navbar-brand">
+          <img
+            src="images/national-emblem.svg"
+            alt="Logo 1"
+            class="navbar-logo"
+          />
+        </div>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="navbar-links collapse navbar-collapse"
+          id="navbarNavDropdown">
+          <ul class="navbar-nav mx-auto ">
+            <li class="navbar-item me-5">
+              <a class="navbar-link active" aria-current="page" href="#"
+                >About Us</a
+              >
+            </li>
+            <li class="navbar-item me-5">
+              <a class="navbar-link" href="#">Digital Locker</a>
+            </li>
+            <li class="navbar-item me-5">
+              <a class="navbar-link" href="#">Contact Us</a>
+            </li>
+            <li class="navbar-item dropdown me-5">
+              <a
+                class="navbar-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Services
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Services 1</a></li>
+                <li><a class="dropdown-item" href="#">Services 2</a></li>
+                <li><a class="dropdown-item" href="#">Services 3</a></li>
+              </ul>
+            </li>
+            <div class="wallet-buttons">
+            <div class="ml-auto buttons-right ml-md-3 me-md-3 d-flex align-items-center">
+              <li class="navbar-item">
+                <a class="navbar-link connect-wallet-btn" id="connectButton" href="#">Connect Wallet</a>
+              </li>
+              <li class="navbar-item">
+                <a class="navbar-link disconnect-wallet-btn" id="disconnectButton" href="#">Disconnect Wallet</a>
+              </li>
+            </div>
+            </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-container">
+      <!-- Left part with text -->
+      <div class="left-part">
+        <h1 class="hero-title">
+          Empowering Certifications <br />
+          with Blockchain Technology
+        </h1>
+        <p class="hero-description">
+          Join the future of certifications with our secure and transparent
+          platform and start your journey towards verifiable and tamper-proof
+          certificates today.
+        </p>
+      </div>
+
+      <!-- Right part with the image -->
+      <div class="right-part">
+        <img src="images/hero_image.png" alt="Hero Image" class="hero-image" />
+      </div>
+    </section>
+
+    <!-- Button Section -->
+    <section class="button-container">
+      <!-- Button 1 -->
+      <!-- <a href="generate.html" class="button">
+        <img src="images/generate.svg" alt="Icon 1" class="button-icon" />
+        <p class="button-description">Generate Certificate</p>
+      </a> -->
+
+      <!-- Button 2 -->
+      <!-- <a href="validate.html" class="button">
+        <img src="images/validate.svg" alt="Icon 2" class="button-icon" />
+        <p class="button-description">Validate Certificate</p>
+      </a> -->
+
+      <!-- Button 3 -->
+      <!-- <a href="download.html" class="button">
+        <img src="images/download.svg" alt="Icon 3" class="button-icon" />
+        <p class="button-description">Download Certificate</p>
+      </a> -->
+
+      <!-- Button 4 -->
+      <!-- <a href="upload.html" id="uploadCSV" class="button">
+        <img src="images/upload.svg" alt="Icon 4" class="button-icon" />
+        <p class="button-description">Upload <br>CSV</p>
+      </a> -->
+
+
+
+
+      <!-- Button 1 -->
+<button id="generateButton" class="button">
+  <img src="images/generate.svg" alt="Icon 1" class="button-icon" />
+  <p class="button-description">Generate Certificate</p>
+</button>
+
+<!-- Button 2 -->
+<button id="validateButton" class="button">
+  <img src="images/validate.svg" alt="Icon 2" class="button-icon" />
+  <p class="button-description">Validate Certificate</p>
+</button>
+
+<!-- Button 3 -->
+<button id="downloadButton" class="button">
+  <img src="images/download.svg" alt="Icon 3" class="button-icon" />
+  <p class="button-description">Download Certificate</p>
+</button>
+
+<!-- Button 4 -->
+<button id="uploadButton" class="button">
+  <img src="images/upload.svg" alt="Icon 4" class="button-icon" />
+  <p class="button-description">Upload <br>CSV</p>
+</button>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <!-- Left part: Copyright information -->
+      <div class="footer-left">
+        <p class="govtBottom">All rights reserved| MeitY Government of India</p>
+      </div>
+      <!-- Right part: Terms and Conditions, Privacy Policy -->
+      <div class="footer-right">
+        <a href="#">Terms and Conditions</a>
+        <span class="separator">|</span>
+        <a href="#">Privacy Policy</a>
+      </div>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      // JavaScript to toggle dark mode
+      let walletConnected = sessionStorage.getItem("walletConnected") === "true";
+      const darkModeToggle = document.getElementById("darkModeToggle");
+      const body = document.body;
+      let isDarkMode = false;
+
+      darkModeToggle.addEventListener("click", () => {
+        isDarkMode = !isDarkMode;
+        body.classList.toggle("dark-mode", isDarkMode);
+
+        // Change the dark mode icon
+        const darkModeIcon = document.querySelector("#darkModeToggle i");
+        darkModeIcon.classList.toggle("fa-sun", !isDarkMode); // Sun icon for light mode
+        darkModeIcon.classList.toggle("fa-moon", isDarkMode); // Moon icon for dark mode
+      });
+
+      // JavaScript to increase/decrease/reset text size
+      const increaseTextSize = document.getElementById("increaseTextSize");
+      const decreaseTextSize = document.getElementById("decreaseTextSize");
+      const resetTextSize = document.getElementById("resetTextSize");
+
+      increaseTextSize.addEventListener("click", () => {
+        document.body.style.fontSize = "larger";
+      });
+
+      decreaseTextSize.addEventListener("click", () => {
+        document.body.style.fontSize = "smaller";
+      });
+
+      resetTextSize.addEventListener("click", () => {
+        document.body.style.fontSize = "initial";
+      });
+
+
+// Get references to the button elements
+// var generateButton = document.getElementById("generateButton");
+var validateButton = document.getElementById("validateButton");
+var downloadButton = document.getElementById("downloadButton");
+var uploadButton = document.getElementById("uploadButton");
+
+// Add click event listeners to the buttons
+// generateButton.addEventListener("click", function () {
+//   if (walletConnected) {
+//     window.location.href = "./generate.html"; // Redirect to generate.html
+//   } else {
+//     alert("Please connect your wallet.");
+//   }
+// });
+
+validateButton.addEventListener("click", function () {
+  if (walletConnected) {
+    window.location.href = "validate.html"; // Redirect to validate.html
+  } else {
+    alert("Please connect your wallet.");
+  }
+});
+
+downloadButton.addEventListener("click", function () {
+  if (walletConnected) {
+    window.location.href = "download.html"; // Redirect to download.html
+  } else {
+    alert("Please connect your wallet.");
+  }
+});
+
+uploadButton.addEventListener("click", function () {
+  if (walletConnected) {
+    window.location.href = "upload.html"; // Redirect to upload.html
+  } else {
+    alert("Please connect your wallet.");
+  }
+});
+
+    </script>
+   
+  </body>
+</html>

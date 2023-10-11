@@ -1,0 +1,98 @@
+body {
+    text-align: center;
+}
+.container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for the "Connect Wallet" button */
+.connect-wallet-btn {
+    background-color: #252525; /* Button background color */
+    color: #fff; /* Text color for the button */
+    border-radius: 7px;
+    padding: 10px 15px;
+    text-decoration: none;
+}
+
+.disconnect-wallet-btn{
+    background-color: #e70101; /* Button background color */
+    color: #fff; /* Text color for the button */
+    border-radius: 7px;
+    padding: 10px 15px;
+    text-decoration: none;
+}
+
+/* Hover effect for the button */
+.connect-wallet-btn:hover {
+    background-color: #000 /* Button background color on hover */
+}
+
+.disconnect-wallet-btn:hover{
+    background-color: #cb0505;
+}
+h1 {
+    font-size: 24px;
+    text-align: center;
+}
+label {
+    display: block;
+    font-weight: bold;
+    margin-top: 20px;
+}
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+button {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Footer styles */
+.footer {
+    background-color: #007BFF; /* Blue background color */
+    color: #fff; /* Text color */
+    padding: 10px 20px; /* Adjust padding as needed */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+}
+
+/* Left part styles */
+.footer-left {
+    font-size: 14px;
+    color: white;
+    text-align: center;
+}
+.govtBottom{
+    margin: 0;
+}
+
+/* Right part styles */
+.footer-right > a {
+    font-size: 14px;
+    color: white;
+}

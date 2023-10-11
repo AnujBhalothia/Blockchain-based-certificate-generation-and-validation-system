@@ -1,0 +1,97 @@
+body {
+    text-align: center;
+}
+/* Styles for the form container */
+.title{
+    margin-bottom: 30px;
+    text-align: center;
+}
+.form-container {
+    max-width: 600px;
+    margin: 30px auto 20px auto;
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Styles for form elements */
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    flex: 1;
+    margin-right: 10px;
+}
+
+.form-label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.form-button {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.form-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+@media(max-width: 920px){
+
+    .form-container {
+        max-width: 600px;
+        margin: 30px auto 70px auto;
+    }
+    /* Footer styles */
+    .footer {
+        background-color: #007BFF; /* Blue background color */
+        color: #fff; /* Text color */
+        padding: 10px 20px; /* Adjust padding as needed */
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+    }
+
+    /* Left part styles */
+    .footer-left {
+        font-size: 14px;
+        color: white;
+        text-align: center;
+    }
+    .govtBottom{
+        margin: 0;
+    }
+
+    /* Right part styles */
+    .footer-right > a {
+        font-size: 14px;
+        color: white;
+    }
+}
+
+
+
+ 

@@ -1,0 +1,105 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+}
+
+.certificate-container {
+    text-align: center;
+    padding: 50px;
+    margin-bottom: 50px;
+}
+
+.certificate {
+    width: 800px;
+    height: 600px;
+    padding: 20px;
+    text-align: center;
+    border: 10px solid #306094;
+    background-color: #eaebe0;
+    margin: 0 auto;
+}
+
+.certificate-inner {
+    width: 750px;
+    height: 550px;
+    padding: 20px;
+    text-align: center;
+    border: 5px solid #7aa2cc;
+    background-color: white;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Split into three sections */
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    width: 58px;
+    height: 33px;
+    margin-right: 10px;
+}
+
+.emblem {
+    width: 42px;
+    height: 45px;
+    margin-right: 10px;
+}
+
+.id {
+    font-size: 15px;
+    text-align: justify;
+    margin-top: 20px;
+}
+
+.certificate-title {
+    font-size: 50px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.recipient-name {
+    font-family: Arial;
+    font-size: 38px;
+    color: rgb(243, 10, 10);
+    margin-top: 20px;
+}
+
+.course-info {
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.date-badge-director {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.date {
+    flex: 1;
+    text-align: left;
+}
+
+.badge {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.director {
+    flex: 1;
+    text-align: right;
+}
+
+.fa-award {
+    font-size: 20px;
+    margin: 0 10px;
+}
